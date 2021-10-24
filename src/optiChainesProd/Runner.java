@@ -30,7 +30,7 @@ public class Runner {
         final long startTime = System.nanoTime();
         ResultatOptimisation ro = oa.optimiserAtelier(a);
         long lengthTime = System.nanoTime();
-        lengthTime = Math.floorDiv(lengthTime - startTime, 1000000000);
+        lengthTime = Math.floorDiv(lengthTime - startTime, 1000000);
 
         System.out.println("Durée de l'opti (en ms) : " + lengthTime);
         System.out.println("Temps min de traitement de l'atelier : " + ro.getTempsTotal());
