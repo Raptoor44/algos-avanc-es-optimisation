@@ -30,6 +30,8 @@ public class ChaineSimple implements Chaine {
             throw new IllegalArgumentException("Le temps d'entrée ou de sortie d'une chaine doit être positif ou nul");
         }
         this.postes = new ArrayList<>(postes);
+        this.tempsEntree = tempsEntree;
+        this.tempsSorte = tempsSortie;
     }
 
     @Override

@@ -24,13 +24,13 @@ public class Runner {
         final Atelier a = 
                 GenerateurAtelier.genererAtelierAleatoire(nbPostes, 1, 20);
         //Créer l'optimiseur
-        final OptimisateurAtelier oa = new OptimisateurAtelierCorrec22(); //TODO : instancier l'optimisateur
+        final OptimisateurAtelierCorrec22 oa = new OptimisateurAtelierCorrec22(); //TODO : instancier l'optimisateur
 
         System.out.println("Début Optimisation");
         final long startTime = System.nanoTime();
-        ResultatOptimisation ro = oa.optimiserAtelier(a);
+        ResultatOptimisation ro = oa.optimiserAtelier_correction(a);
         long lengthTime = System.nanoTime();
-        lengthTime = Math.floorDiv(lengthTime - startTime, 1000000);
+        lengthTime = Math.floorDiv(lengthTime - startTime, nbPostes);
 
         System.out.println("Durée de l'opti (en ms) : " + lengthTime);
         System.out.println("Temps min de traitement de l'atelier : " + ro.getTempsTotal());
